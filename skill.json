@@ -1,0 +1,41 @@
+{
+  "name": "genpark-agent-budget-metering-prepaid-credit-wallet-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Autonomous agent budget metering and prepaid credit wallet enforcing daily velocity caps and automated balance top-ups.",
+  "author": "genpark",
+  "category": "agentic-finops",
+  "tags": [
+    "agent-wallet",
+    "budget-metering",
+    "finops",
+    "prepaid-credits",
+    "velocity-caps"
+  ],
+  "inputs": {
+    "agent_account_id": {
+      "type": "string"
+    },
+    "requested_debit_usd": {
+      "type": "number"
+    },
+    "daily_spending_cap_usd": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "spend_auth_id": {
+      "type": "string"
+    },
+    "remaining_prepaid_balance_usd": {
+      "type": "number"
+    },
+    "debit_approved": {
+      "type": "boolean"
+    },
+    "spend_telemetry_receipt_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
